@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jiin's World</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      font-family: 'Georgia', serif;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: #ffffff;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-shadow:
+        0 0 20px rgba(180, 140, 255, 0.8),
+        0 0 60px rgba(120, 80, 220, 0.5);
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 20px rgba(180,140,255,0.6), 0 0 40px rgba(120,80,220,0.3); }
+      to   { text-shadow: 0 0 40px rgba(200,160,255,1),   0 0 80px rgba(150,100,255,0.7); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Jiin's World</h1>
+</body>
+</html>
+```
