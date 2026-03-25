@@ -4,41 +4,154 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jiin's World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      font-family: 'Georgia', serif;
+      background: #ffd6e0;
+      font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      color: #333;
+      padding: 2rem 1rem;
     }
 
-    h1 {
-      font-size: 4rem;
-      color: #ffffff;
+    header {
       text-align: center;
-      letter-spacing: 0.1em;
-      text-shadow:
-        0 0 20px rgba(180, 140, 255, 0.8),
-        0 0 60px rgba(120, 80, 220, 0.5);
-      animation: glow 3s ease-in-out infinite alternate;
+      margin-bottom: 2.5rem;
     }
 
-    @keyframes glow {
-      from { text-shadow: 0 0 20px rgba(180,140,255,0.6), 0 0 40px rgba(120,80,220,0.3); }
-      to   { text-shadow: 0 0 40px rgba(200,160,255,1),   0 0 80px rgba(150,100,255,0.7); }
+    header h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 4rem;
+      color: white;
+      -webkit-text-stroke: 3px #e87fa0;
+      text-shadow: 4px 4px 0px #e87fa0;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      color: #b05575;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      font-size: 0.85rem;
+      padding: 6px 18px;
+      border-radius: 999px;
+      border: 1px solid #f4a0bf;
+      background: #ffe0ec;
+      color: #993556;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    nav button:hover, nav button.active {
+      background: #f4a0bf;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #f4a0bf;
+      padding: 1.25rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(232, 127, 160, 0.2);
+    }
+
+    .card .icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+
+    .card h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #72243e;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      color: #aaa;
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #faeeda;
+      color: #633806;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #c07090;
     }
   </style>
 </head>
 <body>
-  <h1>Jiin's World</h1>
+
+  <header>
+    <h1>Jiin's World 💗</h1>
+    <p>도구와 프로젝트를 모아두는 공간</p>
+  </header>
+
+  <nav>
+    <button class="active">전체</button>
+    <button>업무</button>
+    <button>개인</button>
+  </nav>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">📋</div>
+      <h2>업무 템플릿 생성기</h2>
+      <p>자주 쓰는 문서 양식을 자동으로 만들어줘요</p>
+      <span class="badge">업무</span>
+    </div>
+
+    <div class="card">
+      <div class="icon">🗓️</div>
+      <h2>일정 정리 도구</h2>
+      <p>한 주 일정을 한눈에 볼 수 있어요</p>
+      <span class="badge">개인</span>
+    </div>
+
+    <div class="card">
+      <div class="icon">✨</div>
+      <h2>새 프로젝트</h2>
+      <p>곧 업데이트될 예정이에요</p>
+      <span class="badge">준비중</span>
+    </div>
+
+  </div>
+
+  <footer>✦ 새로운 도구가 계속 추가될 예정이에요 ✦</footer>
+
 </body>
 </html>
-```
